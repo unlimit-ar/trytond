@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data grouped="1">
+        <record model="ir.message" id="msg_invalid_price_lists_default">
+            <field name="text">You must set one and only one price list as default</field>
+        </record>
+        <record model="ir.message" id="msg_no_rate">
+            <field name="text">No rate found for currency "%(currency)s" on "%(date)s"</field>
+        </record>
+        <record model="ir.message" id="msg_price_list_code_unique">
+            <field name="text">There is already a price list with the same code</field>
+        </record>
+        <record model="ir.message" id="msg_price_list_name_unique">
+            <field name="text">There is already a price list with the same name</field>
+        </record>
+        <record model="ir.message" id="msg_price_list_cannot_delete_active_register">
+            <field name="text">You are trying to delete an active price list. You have to uncheck the active field first</field>
+        </record>
+    </data>
+</tryton>

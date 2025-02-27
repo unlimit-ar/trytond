@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  trytond-v70:
+    container_name: trytond-v70
+    build:
+      dockerfile: Dockerfile
+      context: .
+    volumes:
+      - ./modules/:/tmp/modules
+      - ./trytond.conf:/etc/trytond.conf
+      - ./sao:/var/wwww/sao
+    ports:
+      - "8000:8001"
+    environment:
+      - TRYTOND_CONFIG
+    command:
+      trytond -d trytond70
