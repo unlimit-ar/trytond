@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   trytond-v70:
+    image: tryton/trytond:7.0
     container_name: trytond-v70
     build:
       dockerfile: Dockerfile

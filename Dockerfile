@@ -1,20 +1,20 @@
 # Usa una imagen base de Python
 FROM python:3.12
 
-
 # Establece el directorio de trabajo en /app
 WORKDIR /app
 
 # Copia el archivo de requerimientos y lo instala
 COPY requirements.txt .
 
+RUN apt-get update && apt-get install -y nano swig && apt-get clean
+
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-RUN apt-get update && apt-get install -y nano && apt-get clean
+COPY instala_modules.sh .
+RUN chmod +x instala_modules.sh
 
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+COPY ./modules /tmp/modules
 
-# Configura el entrypoint del contenedor
-ENTRYPOINT ["/entrypoint.sh"]
+RUN ./instala_modules.sh
