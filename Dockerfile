@@ -15,6 +15,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY instala_modules.sh .
 RUN chmod +x instala_modules.sh
 
+COPY instala_modules_ar.sh .
+RUN chmod +x instala_modules_ar.sh
+
 COPY ./modules /tmp/modules
+COPY ./modules_ar /tmp/modules_ar
 
 RUN ./instala_modules.sh
+RUN ./instala_modules_ar.sh
