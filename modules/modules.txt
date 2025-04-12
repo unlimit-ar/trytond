@@ -1,4 +1,0 @@
-prueba_user_application
-padulles_ldap_hnap_authentication
-padulles_laboratory_patients
-padulles_form_cirugia_hnap

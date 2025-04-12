@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MODULES_DIR="/tmp/modules"
+MODULES_DIR="/tmp/modules_ar"
 MODULES_LIST="$MODULES_DIR/modules.txt"
 
 # Verifica si el directorio de módulos existe

@@ -1,5 +1,5 @@
 # Usa una imagen base de Python
-FROM python:3.12
+FROM python:3.9
 
 # Establece el directorio de trabajo en /app
 WORKDIR /app
@@ -23,3 +23,9 @@ COPY ./modules_ar /tmp/modules_ar
 
 RUN ./instala_modules.sh
 RUN ./instala_modules_ar.sh
+
+COPY ./ejecutables/gunicorn.conf.py .
+COPY ./ejecutables/trytond-app.py .
+
+# CMD [ "trytond" ]
+# CMD [ "gunicorn", "trytond-app", "-c", "gunicorn.conf.py" ]
