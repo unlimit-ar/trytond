@@ -1,0 +1,9 @@
+bind = "0.0.0.0:8000"
+accesslog = "/var/log/tryton_access.log"
+errorlog = "/var/log/tryton_error.log"
+workers = 3
+threads = 2
+loglevel = 'info'
+capture_output = True
+timeout = 4500
+max_requests = 2000
