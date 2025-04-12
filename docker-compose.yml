@@ -41,7 +41,7 @@ services:
       - ./trytond.conf:/etc/trytond.conf
     environment:
       - TRYTOND_CONFIG
-    command: 
+    command:
       trytond-worker -d trytond70
 
   trytond-cron-v70:
