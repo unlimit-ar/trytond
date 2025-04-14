@@ -133,3 +133,4 @@ dmypy.json
 *.tar.gz
 sao/
 modules_ar/
+trytond.conf
