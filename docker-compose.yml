@@ -40,10 +40,10 @@ services:
       - ./modules_ar/:/tmp/modules_ar
       - ./trytond.conf:/etc/trytond.conf
     environment:
-      - TRYTOND_CONFIG="/etc/trytond.conf"
+      - TRYTOND_CONFIG
       - TRYTOND_DB
     command:
-      ["trytond-worker", "-d", "${TRYTON_DB}"]
+      ["trytond-worker", "-d", "${TRYTOND_DB}"]
 
   trytond-cron-v70:
     image: tryton/trytond:7.0
@@ -62,7 +62,7 @@ services:
       - TRYTOND_CONFIG
       - TRYTOND_DB
     command: 
-      ["trytond-cron", "-d", "${TRYTON_DB}"]
+      ["trytond-cron", "-d", "${TRYTOND_DB}"]
 
   nginx-sao-v70:
     image: nginx:stable
