@@ -43,7 +43,7 @@ services:
       - TRYTOND_CONFIG="/etc/trytond.conf"
       - TRYTOND_DB
     command:
-      trytond-worker -d ${TRYTON_DB}
+      ["trytond-worker", "-d", "${TRYTON_DB}"]
 
   trytond-cron-v70:
     image: tryton/trytond:7.0
@@ -62,7 +62,7 @@ services:
       - TRYTOND_CONFIG
       - TRYTOND_DB
     command: 
-      trytond-cron -d ${TRYTON_DB}
+      ["trytond-cron", "-d", "${TRYTON_DB}"]
 
   nginx-sao-v70:
     image: nginx:stable
