@@ -22,7 +22,7 @@ services:
       - ./modules_ar/:/tmp/modules_ar
       - ./trytond.conf:/etc/trytond.conf
     environment:
-      - TRYTOND_CONFIG
+      - TRYTOND_CONFIG="/etc/trytond.conf"
     command: 
       ["gunicorn", "-w", "1", "-b", "0.0.0.0:8000", "trytond-app"]
   
@@ -40,9 +40,10 @@ services:
       - ./modules_ar/:/tmp/modules_ar
       - ./trytond.conf:/etc/trytond.conf
     environment:
-      - TRYTOND_CONFIG
+      - TRYTOND_CONFIG="/etc/trytond.conf"
+      - TRYTOND_DB
     command:
-      trytond-worker -d trytond70
+      trytond-worker -d ${TRYTON_DB}
 
   trytond-cron-v70:
     image: tryton/trytond:7.0
@@ -59,8 +60,9 @@ services:
       - ./trytond.conf:/etc/trytond.conf
     environment:
       - TRYTOND_CONFIG
+      - TRYTOND_DB
     command: 
-      trytond-cron -d trytond70
+      trytond-cron -d ${TRYTON_DB}
 
   nginx-sao-v70:
     image: nginx:stable
