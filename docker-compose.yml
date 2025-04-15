@@ -22,7 +22,7 @@ services:
       - ./modules_ar/:/tmp/modules_ar
       - ./trytond.conf:/etc/trytond.conf
     environment:
-      - TRYTOND_CONFIG="/etc/trytond.conf"
+      - TRYTOND_CONFIG
     command: 
       ["gunicorn", "-w", "1", "-b", "0.0.0.0:8000", "trytond-app"]
   
