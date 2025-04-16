@@ -29,9 +29,6 @@ services:
   trytond_worker-v70:
     image: tryton/trytond:7.0
     container_name: trytond_worker-v70
-    build:
-      dockerfile: Dockerfile
-      context: .
     networks:
       red_trytond-70:
         ipv4_address: 192.168.101.11
@@ -48,9 +45,6 @@ services:
   trytond-cron-v70:
     image: tryton/trytond:7.0
     container_name: trytond-cron-v70
-    build:
-      dockerfile: Dockerfile
-      context: .
     networks:
       red_trytond-70:
         ipv4_address: 192.168.101.12

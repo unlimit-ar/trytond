@@ -1,0 +1,187 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "model:ir.action,name:stock.act_shipment_in_form"
+msgid "Supplier Shipments"
+msgstr "Remitos de proveedor"
+
+msgctxt "model:ir.action,name:stock.act_shipment_in_return_form"
+msgid "Supplier Return Shipments"
+msgstr "Devoluciones a proveedor"
+
+msgctxt "model:ir.action,name:stock.act_shipment_internal_form"
+msgid "Internal Shipments"
+msgstr "Remitos internos"
+
+msgctxt "model:ir.action,name:stock.act_shipment_out_form"
+msgid "Customer Shipments"
+msgstr "Remitos a cliente"
+
+msgctxt "model:ir.action,name:stock.act_shipment_out_form2"
+msgid "Customer Shipments"
+msgstr "Remitos a cliente"
+
+msgctxt "model:ir.action,name:stock.act_shipment_out_form3"
+msgid "Supplier Shipments"
+msgstr "Remitos de proveedor"
+
+msgctxt "model:ir.action,name:stock.act_shipment_out_return_form"
+msgid "Customer Return Shipments"
+msgstr "Devoluciones de cliente"
+
+msgctxt "model:ir.action,name:stock.report_shipment_internal"
+msgid "Internal Shipment"
+msgstr "Remitos internos"
+
+msgctxt "model:ir.action,name:stock.wizard_shipment_in_return_assign"
+msgid "Assign Purchase Return Shipment"
+msgstr "Reservar remito de devolución de compra"
+
+msgctxt "model:ir.action,name:stock.wizard_shipment_internal_assign"
+msgid "Assign Shipment Internal"
+msgstr "Reservar remito interno"
+
+msgctxt "model:ir.action,name:stock.wizard_shipment_out_assign"
+msgid "Assign Shipment Out"
+msgstr "Reservar remito de salida"
+
+msgctxt "model:ir.sequence,name:stock.sequence_shipment_in"
+msgid "Supplier Shipment"
+msgstr "Remito de proveedor"
+
+msgctxt "model:ir.sequence,name:stock.sequence_shipment_in_return"
+msgid "Supplier Return Shipment"
+msgstr "Devolución a proveedor"
+
+msgctxt "model:ir.sequence,name:stock.sequence_shipment_internal"
+msgid "Internal Shipment"
+msgstr "Remito interno"
+
+msgctxt "model:ir.sequence,name:stock.sequence_shipment_out"
+msgid "Customer Shipment"
+msgstr "Remito a cliente"
+
+msgctxt "model:ir.sequence,name:stock.sequence_shipment_out_return"
+msgid "Customer Return Shipment"
+msgstr "Devolución de cliente"
+
+msgctxt "model:ir.sequence.type,name:stock.sequence_type_shipment_in"
+msgid "Supplier Shipment"
+msgstr "Remito de proveedor"
+
+msgctxt "model:ir.sequence.type,name:stock.sequence_type_shipment_in_return"
+msgid "Supplier Return Shipment"
+msgstr "Devolución a proveedor"
+
+msgctxt "model:ir.sequence.type,name:stock.sequence_type_shipment_internal"
+msgid "Internal Shipment"
+msgstr "Remito interno"
+
+msgctxt "model:ir.sequence.type,name:stock.sequence_type_shipment_out"
+msgid "Customer Shipment"
+msgstr "Remito a cliente"
+
+msgctxt "model:ir.sequence.type,name:stock.sequence_type_shipment_out_return"
+msgid "Customer Return Shipment"
+msgstr "Devolución de cliente"
+
+msgctxt "model:ir.ui.menu,name:stock.menu_shipment_in_form"
+msgid "Supplier Shipments"
+msgstr "Remitos de proveedor"
+
+msgctxt "model:ir.ui.menu,name:stock.menu_shipment_internal_form"
+msgid "Internal Shipments"
+msgstr "Remitos internos"
+
+msgctxt "model:ir.ui.menu,name:stock.menu_shipment_out_form"
+msgid "Customer Shipments"
+msgstr "Remitos a cliente"
+
+msgctxt "model:ir.ui.menu,name:stock.menu_shipment_in_return_form"
+msgid "Supplier Return Shipments"
+msgstr "Remitos de devolución de proveedor"
+
+msgctxt "model:ir.ui.menu,name:stock.menu_shipment_out_return_form"
+msgid "Customer Return Shipments"
+msgstr "Remitos de devolución de cliente"
+
+msgctxt "model:stock.shipment.in,name:stock."
+msgid "Supplier Shipment"
+msgstr "Remito de proveedor"
+
+msgctxt "model:stock.shipment.in.return,name:stock."
+msgid "Supplier Return Shipment"
+msgstr "Devolución a proveedor"
+
+msgctxt "model:stock.shipment.in.return.assign.failed,name:stock."
+msgid "Assign Supplier Return Shipment"
+msgstr "Reservar devoluciones a proveedor"
+
+msgctxt "model:stock.shipment.internal,name:stock."
+msgid "Internal Shipment"
+msgstr "Remito interno"
+
+msgctxt "model:stock.shipment.internal.assign.failed,name:stock."
+msgid "Assign Shipment Internal"
+msgstr "Reservar remito interno"
+
+msgctxt "model:stock.shipment.out,name:stock."
+msgid "Customer Shipment"
+msgstr "Remito a cliente"
+
+msgctxt "model:stock.shipment.out.assign.failed,name:stock."
+msgid "Assign Shipment Out"
+msgstr "Reservar remito de salida"
+
+msgctxt "model:stock.shipment.out.return,name:stock."
+msgid "Customer Return Shipment"
+msgstr "Devolución de cliente"
+
+msgctxt "report:stock.shipment.in.restocking_list:stock."
+msgid "Shipment Number"
+msgstr "Número de remito"
+
+msgctxt "report:stock.shipment.internal.report:stock."
+msgid "Shipment Number"
+msgstr "Número de remito"
+
+msgctxt "report:stock.shipment.out.delivery_note:stock."
+msgid "Shipment Number:"
+msgstr "Número de remito:"
+
+msgctxt "report:stock.shipment.out.picking_list:stock."
+msgid "Shipment Number"
+msgstr "Número de remito"
+
+msgctxt "report:stock.shipment.out.return.restocking_list:stock."
+msgid "Shipment"
+msgstr "Remito"
+
+msgctxt "view:stock.configuration:stock."
+msgid "Shipments"
+msgstr "Remitos"
+
+msgctxt "field:stock.move,shipment:stock."
+msgid "Shipment"
+msgstr "Remito"
+
+msgctxt "field:product.template,cost_price:product."
+msgid "Cost Price"
+msgstr "Precio de costo"
+
+msgctxt "field:product.product,code:product."
+msgid "Code"
+msgstr "Código Interno"
+
+msgctxt "model:ir.model.button,string:stock.shipment_internal_assign_wizard_button"
+msgid "Assign"
+msgstr "Enviar"
+
+msgctxt "model:ir.action,name:stock.wizard_shipment_internal_assign"
+msgid "Assign Shipment Internal"
+msgstr "Enviar remito interno"
+
+msgctxt "field:party.address,subdivision:party."
+msgid "Subdivision"
+msgstr "Provincia"

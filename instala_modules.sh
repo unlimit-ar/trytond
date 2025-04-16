@@ -9,7 +9,7 @@ if [ -d "$MODULES_DIR" ]; then
 
     # Verifica si el archivo modules.txt existe
     if [ -f "$MODULES_LIST" ]; then
-        while IFS= read -r module; do
+        while IFS= read -r module || [ -n "$module" ]; do
             dir="$MODULES_DIR/$module"
             
             # Verifica si el directorio existe y contiene setup.py o pyproject.toml
