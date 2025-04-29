@@ -66,7 +66,7 @@ setup(name='%s_%s' % (PREFIX, MODULE),
         ],
     package_data={
         'trytond.modules.%s' % MODULE: (info.get('xml', []) + [
-            'tryton.cfg', 'view/*.xml', 'locale/*.po', 'report/*.fodt',
+            'tryton.cfg', 'view/*.xml', 'locale/*.po', 'locale/override/*.po', 'report/*.fodt',
             'report/*.fods', 'report/*.html', 'report/stylesheet/*.css',
             'report/translations/*/*/*.po', 'icons/*.svg', 'tests/*.rst']),
         },

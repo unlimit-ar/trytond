@@ -114,57 +114,17 @@ msgctxt "model:stock.shipment.in.return,name:stock."
 msgid "Supplier Return Shipment"
 msgstr "Devolución a proveedor"
 
-msgctxt "model:stock.shipment.in.return.assign.failed,name:stock."
-msgid "Assign Supplier Return Shipment"
-msgstr "Reservar devoluciones a proveedor"
-
 msgctxt "model:stock.shipment.internal,name:stock."
 msgid "Internal Shipment"
 msgstr "Remito interno"
-
-msgctxt "model:stock.shipment.internal.assign.failed,name:stock."
-msgid "Assign Shipment Internal"
-msgstr "Reservar remito interno"
 
 msgctxt "model:stock.shipment.out,name:stock."
 msgid "Customer Shipment"
 msgstr "Remito a cliente"
 
-msgctxt "model:stock.shipment.out.assign.failed,name:stock."
-msgid "Assign Shipment Out"
-msgstr "Reservar remito de salida"
-
 msgctxt "model:stock.shipment.out.return,name:stock."
 msgid "Customer Return Shipment"
 msgstr "Devolución de cliente"
-
-msgctxt "report:stock.shipment.in.restocking_list:stock."
-msgid "Shipment Number"
-msgstr "Número de remito"
-
-msgctxt "report:stock.shipment.internal.report:stock."
-msgid "Shipment Number"
-msgstr "Número de remito"
-
-msgctxt "report:stock.shipment.out.delivery_note:stock."
-msgid "Shipment Number:"
-msgstr "Número de remito:"
-
-msgctxt "report:stock.shipment.out.picking_list:stock."
-msgid "Shipment Number"
-msgstr "Número de remito"
-
-msgctxt "report:stock.shipment.out.return.restocking_list:stock."
-msgid "Shipment"
-msgstr "Remito"
-
-msgctxt "view:stock.configuration:stock."
-msgid "Shipments"
-msgstr "Remitos"
-
-msgctxt "field:stock.move,shipment:stock."
-msgid "Shipment"
-msgstr "Remito"
 
 msgctxt "field:product.template,cost_price:product."
 msgid "Cost Price"
