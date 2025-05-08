@@ -14,6 +14,7 @@ services:
     build:
       dockerfile: Dockerfile
       context: .
+    restart: always
     networks:
       red_trytond-70:
         ipv4_address: 192.168.101.10
@@ -29,6 +30,7 @@ services:
   trytond_worker-v70:
     image: tryton/trytond:7.0
     container_name: trytond_worker-v70
+    restart: always
     networks:
       red_trytond-70:
         ipv4_address: 192.168.101.11
@@ -45,6 +47,7 @@ services:
   trytond-cron-v70:
     image: tryton/trytond:7.0
     container_name: trytond-cron-v70
+    restart: always
     networks:
       red_trytond-70:
         ipv4_address: 192.168.101.12
@@ -61,6 +64,7 @@ services:
   nginx-sao-v70:
     image: nginx:stable
     container_name: nginx-sao-v70
+    restart: always
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
       - ./sao:/var/www/sao
