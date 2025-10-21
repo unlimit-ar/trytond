@@ -12,14 +12,8 @@ RUN apt-get update && apt-get install -y nano swig && apt-get clean
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY instala_modules.sh .
-RUN chmod +x instala_modules.sh
-
-COPY instala_modules_ar.sh .
-RUN chmod +x instala_modules_ar.sh
-
 COPY ./modules /tmp/modules
 COPY ./modules_ar /tmp/modules_ar
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
-RUN ./instala_modules.sh
-RUN ./instala_modules_ar.sh
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
