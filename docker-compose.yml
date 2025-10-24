@@ -15,6 +15,9 @@ services:
       - "8000:8001"
     environment:
       - TRYTOND_CONFIG
+      - TRYTON_DATABASE
+      - DB_HOST
+      - MODULE_PREFIXES
     command:
-      trytond -d trytond70
+      trytond
 
