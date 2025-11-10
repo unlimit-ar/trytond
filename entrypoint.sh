@@ -19,7 +19,7 @@ get_module_hash() {
     echo ""
     return
   fi
-  find "$module_path" -type f \( -name "*.py" -o -name "*.xml" -o -name "*.csv" -o -name "*.po" \) -print0 \
+  find "$module_path" -type f \( -name "*.py" -o -name "*.xml" -o -name "*.po" \) -print0 \
     | xargs -0 md5sum 2>/dev/null || true \
     | sort -k2 \
     | md5sum \
