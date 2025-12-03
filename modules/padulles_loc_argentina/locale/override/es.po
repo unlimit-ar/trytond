@@ -1,0 +1,287 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:stock.configuration,shipment_in_return_sequence:stock."
+msgid "Supplier Return Shipment Sequence"
+msgstr "Secuencia de remito devolución proveedor"
+
+msgctxt "field:stock.configuration,shipment_in_sequence:stock."
+msgid "Supplier Shipment Sequence"
+msgstr "Secuencia de remito proveedor"
+
+msgctxt "field:stock.configuration,shipment_internal_sequence:stock."
+msgid "Internal Shipment Sequence"
+msgstr "Secuencia de remito interno"
+
+msgctxt "field:stock.configuration,shipment_internal_transit:stock."
+msgid "Internal Shipment Transit"
+msgstr "Transito remitos internos"
+
+msgctxt "field:stock.configuration,shipment_out_return_sequence:stock."
+msgid "Customer Return Shipment Sequence"
+msgstr "Secuencia de remito devolución cliente"
+
+msgctxt "field:stock.configuration,shipment_out_sequence:stock."
+msgid "Customer Shipment Sequence"
+msgstr "Secuencia de remito cliente"
+
+msgctxt "field:stock.configuration.location,shipment_internal_transit:stock."
+msgid "Internal Shipment Transit"
+msgstr "Transito remitos internos"
+
+msgctxt "field:stock.configuration.sequence,shipment_in_return_sequence:stock."
+msgid "Supplier Return Shipment Sequence"
+msgstr "Secuencia de remito devolución proveedor"
+
+msgctxt "field:stock.configuration.sequence,shipment_in_sequence:stock."
+msgid "Supplier Shipment Sequence"
+msgstr "Secuencia de remito proveedor"
+
+msgctxt "field:stock.configuration.sequence,shipment_internal_sequence:stock."
+msgid "Internal Shipment Sequence"
+msgstr "Secuencia de remito interno"
+
+msgctxt "field:stock.configuration.sequence,shipment_out_return_sequence:stock."
+msgid "Customer Return Shipment Sequence"
+msgstr "Secuencia de remito devolución cliente"
+
+msgctxt "field:stock.configuration.sequence,shipment_out_sequence:stock."
+msgid "Customer Shipment Sequence"
+msgstr "Secuencia de remito cliente"
+
+msgctxt "field:stock.move,shipment:stock."
+msgid "Shipment"
+msgstr "Remito"
+
+msgctxt "help:stock.configuration,shipment_in_return_sequence:stock."
+msgid "Used to generate the number given to supplier return shipments."
+msgstr ""
+"Usado para generar el número asignado a los remitos de devolución de "
+"proveedor."
+
+msgctxt "help:stock.configuration,shipment_in_sequence:stock."
+msgid "Used to generate the number given to supplier shipments."
+msgstr "Usado para generar el número asignado a los remitos de proveedor."
+
+msgctxt "help:stock.configuration,shipment_internal_sequence:stock."
+msgid "Used to generate the number given to internal shipments."
+msgstr "Usado para generar el número asignado a los remitos internos."
+
+msgctxt "help:stock.configuration,shipment_out_return_sequence:stock."
+msgid "Used to generate the number given to customer return shipments."
+msgstr ""
+"Usado para generar el número asignado a los remitos de devolución de "
+"cliente."
+
+msgctxt "help:stock.configuration,shipment_out_sequence:stock."
+msgid "Used to generate the number given to customer shipments."
+msgstr "Usado para generar el número asignado a los remitos de cliente."
+
+msgctxt "help:stock.shipment.in,company:stock."
+msgid "The company the shipment is associated with."
+msgstr "La empresa a la que está asociada el remito."
+
+msgctxt "help:stock.shipment.in,number:stock."
+msgid "The main identifier for the shipment."
+msgstr "El identificador principal del remito."
+
+msgctxt "help:stock.shipment.in,reference:stock."
+msgid "The external identifier for the shipment."
+msgstr "El identificador externo del remito."
+
+msgctxt "help:stock.shipment.in,state:stock."
+msgid "The current state of the shipment."
+msgstr "El estado actual del remito."
+
+msgctxt "help:stock.shipment.in.return,company:stock."
+msgid "The company the shipment is associated with."
+msgstr "La empresa con la que está asociado el remito."
+
+msgctxt "help:stock.shipment.in.return,number:stock."
+msgid "The main identifier for the shipment."
+msgstr "El identificador principal del remito."
+
+msgctxt "help:stock.shipment.in.return,reference:stock."
+msgid "The external identifier for the shipment."
+msgstr "El identificador externo del remito."
+
+msgctxt "help:stock.shipment.in.return,state:stock."
+msgid "The current state of the shipment."
+msgstr "El estado actual del remito."
+
+msgctxt "help:stock.shipment.internal,company:stock."
+msgid "The company the shipment is associated with."
+msgstr "La empresa con la que está asociada el remito."
+
+msgctxt "help:stock.shipment.internal,moves:stock."
+msgid "The moves that perform the shipment."
+msgstr "Los movimientos que realizan el remito."
+
+msgctxt "help:stock.shipment.internal,number:stock."
+msgid "The main identifier for the shipment."
+msgstr "El identificador principal del remito."
+
+msgctxt "help:stock.shipment.internal,reference:stock."
+msgid "The external identifier for the shipment."
+msgstr "El identificador externo del remito."
+
+msgctxt "help:stock.shipment.internal,state:stock."
+msgid "The current state of the shipment."
+msgstr "El estado actual del remito."
+
+msgctxt "help:stock.shipment.out,company:stock."
+msgid "The company the shipment is associated with."
+msgstr "La empresa con la que el remito está asociado."
+
+msgctxt "help:stock.shipment.out,number:stock."
+msgid "The main identifier for the shipment."
+msgstr "El identificador principal del remito."
+
+msgctxt "help:stock.shipment.out,reference:stock."
+msgid "The external identifier for the shipment."
+msgstr "El identificador externo del remito."
+
+msgctxt "help:stock.shipment.out,state:stock."
+msgid "The current state of the shipment."
+msgstr "El estado actual del remito."
+
+msgctxt "help:stock.shipment.out.return,company:stock."
+msgid "The company the shipment is associated with."
+msgstr "La empresa con la que el remito está asociado."
+
+msgctxt "help:stock.shipment.out.return,number:stock."
+msgid "The main identifier for the shipment."
+msgstr "El identificador principal del remito."
+
+msgctxt "help:stock.shipment.out.return,reference:stock."
+msgid "The external identifier for the shipment."
+msgstr "El identificador externo del remito."
+
+msgctxt "help:stock.shipment.out.return,state:stock."
+msgid "The current state of the shipment."
+msgstr "El estado actual del remito."
+
+msgctxt "model:ir.action,name:wizard_shipment_in_return_assign"
+msgid "Assign Supplier Return Shipment"
+msgstr "Reservar el remito de devolución de proveedor"
+
+msgctxt "model:ir.action,name:wizard_shipment_internal_assign"
+msgid "Assign Internal Shipment"
+msgstr "Reserva el remito interno"
+
+msgctxt "model:ir.action,name:wizard_shipment_out_assign"
+msgid "Assign Customer Shipment"
+msgstr "Reservar remito de cliente"
+
+msgctxt "model:ir.message,text:msg_erase_party_shipment"
+msgid ""
+"You cannot erase party \"%(party)s\" while they have pending shipments with "
+"company \"%(company)s\"."
+msgstr ""
+"No puede eliminar el tercero \"%(party)s\" mientras tengan remitos "
+"pendientes con la empresa \"%(company)s\"."
+
+msgctxt "model:ir.message,text:msg_shipment_delete_cancel"
+msgid "To delete shipment \"%(shipment)s\" you must cancel it."
+msgstr "Para eliminar el remito \"%(shipment)s\" debe cancelarlo."
+
+msgctxt "model:ir.model.button,confirm:shipment_in_receive_button"
+msgid "Are you sure you want to receive the shipment?"
+msgstr "¿Estás seguro que quieres recibir el remito?"
+
+msgctxt "model:ir.model.button,confirm:shipment_in_return_done_button"
+msgid "Are you sure you want to complete the shipment?"
+msgstr "¿Estás seguro que quieres finalizar el remito?"
+
+msgctxt "model:ir.model.button,confirm:shipment_out_done_button"
+msgid "Are you sure you want to complete the shipment?"
+msgstr "¿Estás seguro que quieres finalizar el remito?"
+
+msgctxt "model:ir.model.button,confirm:shipment_out_return_receive_button"
+msgid "Are you sure you want to receive the shipment?"
+msgstr "¿Estás seguro que quieres recibir el remito?"
+
+msgctxt "model:ir.sequence,name:sequence_shipment_in"
+msgid "Supplier Shipment"
+msgstr "Remito de proveedor"
+
+msgctxt "model:ir.sequence,name:sequence_shipment_in_return"
+msgid "Supplier Return Shipment"
+msgstr "Remito de devolución de proveedor"
+
+msgctxt "model:ir.sequence,name:sequence_shipment_internal"
+msgid "Internal Shipment"
+msgstr "Remito interno"
+
+msgctxt "model:ir.sequence,name:sequence_shipment_out"
+msgid "Customer Shipment"
+msgstr "Remito de cliente"
+
+msgctxt "model:ir.sequence,name:sequence_shipment_out_return"
+msgid "Customer Return Shipment"
+msgstr "Remito de devolución de cliente"
+
+msgctxt "model:ir.sequence.type,name:sequence_type_shipment_in"
+msgid "Supplier Shipment"
+msgstr "Remito de proveedor"
+
+msgctxt "model:ir.sequence.type,name:sequence_type_shipment_in_return"
+msgid "Supplier Return Shipment"
+msgstr "Remito de devolución de proveedor"
+
+msgctxt "model:ir.sequence.type,name:sequence_type_shipment_internal"
+msgid "Internal Shipment"
+msgstr "Remito interno"
+
+msgctxt "model:ir.sequence.type,name:sequence_type_shipment_out"
+msgid "Customer Shipment"
+msgstr "Remito de cliente"
+
+msgctxt "model:ir.sequence.type,name:sequence_type_shipment_out_return"
+msgid "Customer Return Shipment"
+msgstr "Remito de devolución de cliente"
+
+msgctxt "model:stock.shipment.assign.partial,name:stock."
+msgid "Assign Shipment"
+msgstr "Reservar el remito"
+
+msgctxt "model:stock.shipment.in.return,name:stock."
+msgid "Supplier Return Shipment"
+msgstr "Remito devolución proveedor"
+
+msgctxt "model:stock.shipment.internal,name:stock."
+msgid "Internal Shipment"
+msgstr "Remito interno"
+
+msgctxt "model:stock.shipment.out,name:stock."
+msgid "Customer Shipment"
+msgstr "Remito cliente"
+
+msgctxt "model:stock.shipment.out.return,name:stock."
+msgid "Customer Return Shipment"
+msgstr "Remito devolución cliente"
+
+msgctxt "report:stock.shipment.internal.report:stock."
+msgid "Internal Shipment"
+msgstr "Remito interno"
+
+msgctxt "selection:ir.cron,method:stock."   
+msgid "Assign Customer Shipments"
+msgstr "Reserva los remitos de cliente"
+
+msgctxt "selection:ir.cron,method:stock."
+msgid "Assign Internal Shipments"
+msgstr "Reserva los remitos internos"
+
+msgctxt "selection:ir.cron,method:stock."
+msgid "Reschedule Customer Shipments"
+msgstr "Replanificar los remitos de cliente"
+
+msgctxt "selection:ir.cron,method:stock."
+msgid "Reschedule Internal Shipments"
+msgstr "Replanificar los remitos internos"
+
+msgctxt "selection:ir.cron,method:stock."
+msgid "Reschedule Supplier Return Shipments"
+msgstr "Replanifica los remitos de devolución de proveedor"

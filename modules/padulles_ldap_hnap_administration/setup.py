@@ -1,17 +1,16 @@
-#!/usr/bin/env python
-from setuptools import setup
-import re
-import os
-import io
-try:
-    from configparser import ConfigParser
-except ImportError:
-    from ConfigParser import ConfigParser
+#!/usr/bin/env python3
+# This file is part of Tryton.  The COPYRIGHT file at the top level of
+# this repository contains the full copyright notices and license terms.
 
-MODULE = 'padulles_purchase_request'
-PREFIX = ''
-MODULE2PREFIX = {
-    }
+import io
+import os
+import re
+from configparser import ConfigParser
+
+from setuptools import find_packages, setup
+
+MODULE = 'ldap_hnap_authentication'
+PREFIX = 'padulles'
 
 def read(fname):
     return io.open(
@@ -19,17 +18,14 @@ def read(fname):
         'r', encoding='utf-8').read()
 
 def get_require_version(name):
-    if minor_version % 2:
-        require = '%s >= %s.%s.dev0, < %s.%s'
-    else:
-        require = '%s >= %s.%s, < %s.%s'
+    require = '%s >= %s.%s, < %s.%s'
     require %= (name, major_version, minor_version,
         major_version, minor_version + 1)
     return require
 
 
 config = ConfigParser()
-config.read(open('tryton.cfg'))
+config.read('tryton.cfg')
 info = dict(config.items('tryton'))
 for key in ('depends', 'extras_depend', 'xml'):
     if key in info:
@@ -40,13 +36,16 @@ major_version, minor_version, _ = version.split('.', 2)
 major_version = int(major_version)
 minor_version = int(minor_version)
 
-requires = []
+if minor_version % 2:
+    download_url = ''
+else:
+    download_url = 'http://downloads.tryton.org/%s.%s/' % (
+        major_version, minor_version)
+
+requires = ['ldap3 >= 2.0.7']
 for dep in info.get('depends', []):
-    if re.match(r'^padulles*', dep):
-        continue
     if not re.match(r'(ir|res)(\W|$)', dep):
-        prefix = MODULE2PREFIX.get(dep, 'trytond')
-        requires.append(get_require_version('%s_%s' % (prefix, dep)))
+        requires.append(get_require_version('trytond_%s' % dep))
 requires.append(get_require_version('trytond'))
 
 tests_require = [get_require_version('proteus')]
@@ -63,7 +62,7 @@ setup(name='%s_%s' % (PREFIX, MODULE),
     package_dir={'trytond.modules.%s' % MODULE: '.'},
     packages=[
         'trytond.modules.%s' % MODULE,
-        'trytond.modules.%s.tests' % MODULE,
+        'trytond.modules.%s.tests' % MODULE,    
         ],
     package_data={
         'trytond.modules.%s' % MODULE: (info.get('xml', []) + [
@@ -76,20 +75,42 @@ setup(name='%s_%s' % (PREFIX, MODULE),
         'Environment :: Plugins',
         'Framework :: Tryton',
         'Intended Audience :: Developers',
-        'Intended Audience :: Manufacturing',
-        'Intended Audience :: Science/Research',
-        'Intended Audience :: Other Audience',
-        'License :: OSI Approved :: GNU General Public License v3 or later'
-        ' (GPLv3+)',
+        'Intended Audience :: Financial and Insurance Industry',
+        'Intended Audience :: Legal Industry',
+        'License :: OSI Approved :: '
+        'GNU General Public License v3 or later (GPLv3+)',
+        'Natural Language :: Bulgarian',
+        'Natural Language :: Catalan',
+        'Natural Language :: Chinese (Simplified)',
+        'Natural Language :: Czech',
+        'Natural Language :: Dutch',
         'Natural Language :: English',
+        'Natural Language :: Finnish',
+        'Natural Language :: French',
+        'Natural Language :: German',
+        'Natural Language :: Hungarian',
+        'Natural Language :: Indonesian',
+        'Natural Language :: Italian',
+        'Natural Language :: Persian',
+        'Natural Language :: Polish',
+        'Natural Language :: Portuguese (Brazilian)',
+        'Natural Language :: Romanian',
+        'Natural Language :: Russian',
+        'Natural Language :: Slovenian',
+        'Natural Language :: Spanish',
+        'Natural Language :: Turkish',
+        'Natural Language :: Ukrainian',
         'Operating System :: OS Independent',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
         'Programming Language :: Python :: Implementation :: CPython',
-        'Programming Language :: Python :: Implementation :: PyPy',
         'Topic :: Office/Business',
-        'Topic :: Scientific/Engineering',
+        ('Topic :: System :: Systems Administration '
+            ':: Authentication/Directory :: LDAP'),
         ],
     license='GPL-3',
     install_requires=requires,
