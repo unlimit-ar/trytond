@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+
+<tryton>
+    <data>
+
+        <record model="ir.ui.view" id="equipos_view_form">
+            <field name="model">alpi.equipos</field>
+            <field name="type">form</field>
+            <field name="name">equipos_form</field>
+        </record>
+        <record model="ir.ui.view" id="equipos_view_tree">
+            <field name="model">alpi.equipos</field>
+            <field name="type">tree</field>
+            <field name="name">equipos_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="equipos_movimientos_view_form">
+            <field name="model">alpi.equipos.movimientos</field>
+            <field name="type">form</field>
+            <field name="name">equipos_movimientos_form</field>
+        </record>
+        <record model="ir.ui.view" id="equipos_movimientos_view_tree">
+            <field name="model">alpi.equipos.movimientos</field>
+            <field name="type">tree</field>
+            <field name="name">equipos_movimientos_tree</field>
+        </record>
+
+        <!-- acciones -->
+        <record model="ir.action.act_window" id="act_alpi_equipos">
+            <field name="name">Equipos y Herramientas</field>
+            <field name="res_model">alpi.equipos</field>
+            <field name="domain" eval="" pyson="1"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_equipos_tree_view">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="equipos_view_tree"/>
+            <field name="act_window" ref="act_alpi_equipos"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_equipos_form_view">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="equipos_view_form"/>
+            <field name="act_window" ref="act_alpi_equipos"/>
+        </record>
+
+       <menuitem
+           sequence="100"
+           action="act_alpi_equipos"
+           id="menu_act_equipos"/>
+       <record model="ir.ui.menu-res.group" id="act_equipos_group_admin">
+          <field name="menu" ref="menu_act_equipos"/>
+          <field name="group" ref="res.group_admin"/>
+       </record> 
+
+    </data>
+</tryton>
