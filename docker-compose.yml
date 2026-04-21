@@ -5,7 +5,7 @@ services:
     environment:
       - POSTGRES_USER=tryton
       - POSTGRES_PASSWORD=tryton
-      - POSTGRES_DB=tryton
+      - POSTGRES_DB=tryton_moyano
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
@@ -19,13 +19,13 @@ services:
       retries: 5
 
   trytond-v70:
-    image: tryton/trytond:7.0
+    image: trytond:7.0
     container_name: trytond-v70
     build:
       dockerfile: Dockerfile
       context: .
     volumes:
-      - ./modules/:/tmp/modules
+      - ./modules/:/opt/tryton/7.0/modules
       - ./trytond.conf:/etc/trytond.conf
       - ./sao:/var/www/sao
     ports:

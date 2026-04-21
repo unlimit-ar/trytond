@@ -12,11 +12,11 @@ RUN apt-get update && apt-get install -y nano swig && apt-get clean
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY ./modules ./modules
+# COPY ./modules ./modules
 COPY ./modules_ar ./modules_ar
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-RUN chmod +x /usr/local/bin/entrypoint.sh
+# COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+# RUN chmod +x /usr/local/bin/entrypoint.sh
 
-RUN mkdir /var/lib/tryton/
+# RUN mkdir /var/lib/tryton/
 
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+# ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
