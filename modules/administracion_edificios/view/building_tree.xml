@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="name"/>
+    <field name="address"/>
+    <field name="departments" string="Departments"/>
+    <field name="expenses" string="Expenses"/>
+</tree>

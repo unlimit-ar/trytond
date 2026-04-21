@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<form>
+    <label name="building"/>
+    <field name="building"/>
+    <label name="party"/>
+    <field name="party"/>
+    <label name="floor"/>
+    <field name="floor"/>
+    <label name="unit"/>
+    <field name="unit"/>
+    <label name="coefficient"/>
+    <field name="coefficient"/>
+    <label name="monthly_fee"/>
+    <field name="monthly_fee"/>
+</form>

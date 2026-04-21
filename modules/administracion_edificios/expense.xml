@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="expense_view_tree">
+            <field name="model">administracion.edificios.expense</field>
+            <field name="type">tree</field>
+            <field name="name">expense_tree</field>
+        </record>
+        <record model="ir.ui.view" id="expense_view_form">
+            <field name="model">administracion.edificios.expense</field>
+            <field name="type">form</field>
+            <field name="name">expense_form</field>
+        </record>
+        <record model="ir.ui.view" id="expense_line_view_tree">
+            <field name="model">administracion.edificios.expense.line</field>
+            <field name="type">tree</field>
+            <field name="name">expense_line_tree</field>
+        </record>
+        <record model="ir.ui.view" id="expense_line_view_form">
+            <field name="model">administracion.edificios.expense.line</field>
+            <field name="type">form</field>
+            <field name="name">expense_line_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_expense">
+            <field name="name">Building Expenses</field>
+            <field name="res_model">administracion.edificios.expense</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_expense_tree_view">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="expense_view_tree"/>
+            <field name="act_window" ref="act_expense"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_expense_form_view">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="expense_view_form"/>
+            <field name="act_window" ref="act_expense"/>
+        </record>
+    </data>
+</tryton>

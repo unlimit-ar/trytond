@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<form>
+    <label name="description"/>
+    <field name="description"/>
+    <label name="amount"/>
+    <field name="amount"/>
+</form>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<form>
+    <label name="name"/>
+    <field name="name"/>
+    <label name="address"/>
+    <field name="address" colspan="3"/>
+    <notebook colspan="4">
+        <page string="Departments" id="departments">
+            <field name="departments" colspan="4"/>
+        </page>
+        <page string="Expenses" id="expenses">
+            <field name="expenses" colspan="4"/>
+        </page>
+    </notebook>
+</form>

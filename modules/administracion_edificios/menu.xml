@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <menuitem
+            id="menu_administracion_edificios_root"
+            name="Administracion de Edificios"
+            sequence="100"/>
+        <menuitem
+            id="menu_administracion_edificios_buildings"
+            name="Edificios"
+            parent="menu_administracion_edificios_root"
+            action="act_building"
+            sequence="10"/>
+        <menuitem
+            id="menu_administracion_edificios_departments"
+            name="Departamentos"
+            parent="menu_administracion_edificios_root"
+            action="act_department"
+            sequence="20"/>
+        <menuitem
+            id="menu_administracion_edificios_expenses"
+            name="Expensas"
+            parent="menu_administracion_edificios_root"
+            action="act_expense"
+            sequence="30"/>
+    </data>
+</tryton>

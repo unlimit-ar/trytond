@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<form>
+    <label name="building"/>
+    <field name="building"/>
+    <label name="period"/>
+    <field name="period"/>
+    <label name="total_amount"/>
+    <field name="total_amount"/>
+    <field name="lines" colspan="4"/>
+</form>
