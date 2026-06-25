@@ -1,11 +1,11 @@
 services:
   postgres:
     image: postgres:17
-    container_name: postgres-v17
+    container_name: postgres-tryton-v80
     environment:
       - POSTGRES_USER=tryton
       - POSTGRES_PASSWORD=tryton
-      - POSTGRES_DB=tryton
+      - POSTGRES_DB=tryton80
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
@@ -13,14 +13,13 @@ services:
     networks:
       - tryton_network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U tryton -d tryton"]
+      test: ["CMD-SHELL", "pg_isready -U tryton -d tryton80"]
       interval: 10s
       timeout: 5s
       retries: 5
 
-  trytond-v70:
-    image: tryton/trytond:7.0
-    container_name: trytond-v70
+  trytond-v80:
+    container_name: trytond-v80
     build:
       dockerfile: Dockerfile
       context: .
@@ -36,10 +35,10 @@ services:
       - DB_HOSTNAME=postgres
       - DB_HOST
       - DB_PORT=5432
-      - DB_NAME=tryton
+      - DB_NAME=tryton80
       - DB_USER=tryton
       - DB_PASSWORD=tryton
-      - TRYTON_DATABASE=tryton
+      - TRYTON_DATABASE=tryton80
       - MODULE_PREFIXES=padulles_
     networks:
       - tryton_network
@@ -54,4 +53,4 @@ networks:
 
 volumes:
   postgres_data:
-    name: postgres_data_trytond_v70
+    name: postgres_data_trytond

@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<tree>
-    <field name="user"/>
-    <field name="date" widget="date"/>
-    <field name="observaciones" widget="text"/>
-    <field name="state"/>
-</tree>
