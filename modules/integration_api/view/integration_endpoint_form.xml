@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<form col="6">
+  <label name="name"/>
+  <field name="name"/>
+  <label name="active"/>
+  <field name="active"/>
+  <newline/>
+  <label name="model_name"/>
+  <field name="model_name"/>
+  <label name="event"/>
+  <field name="event"/>
+  <newline/>
+  <label name="url"/>
+  <field name="url" colspan="3"/>
+  <newline/>
+  <label name="method"/>
+  <field name="method"/>
+  <label name="timeout"/>
+  <field name="timeout"/>
+  <label name="retry_count"/>
+  <field name="retry_count"/>
+  <notebook colspan="6">
+    <page string="Headers" id="headers">
+      <field name="headers_template" colspan="4"/>
+    </page>
+    <page string="Payload" id="payload">
+      <field name="payload_template" colspan="4"/>
+    </page>
+    <page string="Condition" id="condition">
+      <field name="condition_expression" colspan="4"/>
+    </page>
+  </notebook>
+  <button name="test_integration" icon="tryton-launch" colspan="2"/>
+</form>

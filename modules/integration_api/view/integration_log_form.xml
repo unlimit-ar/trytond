@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<form col="6">
+  <label name="endpoint"/>
+  <field name="endpoint"/>
+  <label name="execution_date"/>
+  <field name="execution_date"/>
+  <newline/>
+  <label name="model_name"/>
+  <field name="model_name"/>
+  <label name="record_id"/>
+  <field name="record_id"/>
+  <label name="success"/>
+  <field name="success"/>
+  <newline/>
+  <label name="error_message"/>
+  <field name="error_message" colspan="5"/>
+  <notebook colspan="6">
+    <page string="Request" id="request">
+      <label name="request_method"/>
+      <field name="request_method"/>
+      <label name="request_url"/>
+      <field name="request_url"/>
+      <newline/>
+      <field name="request_headers" colspan="4"/>
+      <field name="request_payload" colspan="4"/>
+    </page>
+    <page string="Response" id="response">
+      <label name="response_status"/>
+      <field name="response_status"/>
+      <label name="execution_time"/>
+      <field name="execution_time"/>
+      <newline/>
+      <field name="response_headers" colspan="4"/>
+      <field name="response_body" colspan="4"/>
+    </page>
+  </notebook>
+</form>

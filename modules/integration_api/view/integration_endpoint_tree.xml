@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<tree>
+  <field name="name"/>
+  <field name="active"/>
+  <field name="model_name"/>
+  <field name="event"/>
+  <field name="method"/>
+  <field name="url"/>
+  <field name="timeout"/>
+  <field name="retry_count"/>
+</tree>

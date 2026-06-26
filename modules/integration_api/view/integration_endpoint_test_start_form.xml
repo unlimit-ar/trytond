@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form col="4">
+  <label name="endpoint"/>
+  <field name="endpoint"/>
+  <label name="model_name"/>
+  <field name="model_name"/>
+  <label name="record_id"/>
+  <field name="record_id"/>
+</form>

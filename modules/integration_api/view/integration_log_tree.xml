@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<tree>
+  <field name="execution_date"/>
+  <field name="endpoint"/>
+  <field name="model_name"/>
+  <field name="record_id"/>
+  <field name="request_method"/>
+  <field name="request_url"/>
+  <field name="response_status"/>
+  <field name="success"/>
+</tree>

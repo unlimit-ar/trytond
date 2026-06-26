@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <record model="res.group" id="group_integration_admin">
+            <field name="name">Integration Administration</field>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_integration_admin">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_integration_admin"/>
+        </record>
+
+        <menuitem name="Integrations" sequence="100" id="menu_integration"/>
+
+        <record model="ir.ui.view" id="integration_endpoint_view_tree">
+            <field name="model">integration.endpoint</field>
+            <field name="type">tree</field>
+            <field name="name">integration_endpoint_tree</field>
+        </record>
+        <record model="ir.ui.view" id="integration_endpoint_view_form">
+            <field name="model">integration.endpoint</field>
+            <field name="type">form</field>
+            <field name="name">integration_endpoint_form</field>
+        </record>
+        <record model="ir.ui.view" id="integration_log_view_tree">
+            <field name="model">integration.log</field>
+            <field name="type">tree</field>
+            <field name="name">integration_log_tree</field>
+        </record>
+        <record model="ir.ui.view" id="integration_log_view_form">
+            <field name="model">integration.log</field>
+            <field name="type">form</field>
+            <field name="name">integration_log_form</field>
+        </record>
+        <record model="ir.ui.view" id="integration_endpoint_test_start_view_form">
+            <field name="model">integration.endpoint.test.start</field>
+            <field name="type">form</field>
+            <field name="name">integration_endpoint_test_start_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_integration_endpoint">
+            <field name="name">Integration Endpoints</field>
+            <field name="res_model">integration.endpoint</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_integration_endpoint_view_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="integration_endpoint_view_tree"/>
+            <field name="act_window" ref="act_integration_endpoint"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_integration_endpoint_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="integration_endpoint_view_form"/>
+            <field name="act_window" ref="act_integration_endpoint"/>
+        </record>
+        <menuitem parent="menu_integration" action="act_integration_endpoint"
+            sequence="10" id="menu_integration_endpoint"/>
+
+        <record model="ir.action.act_window" id="act_integration_log">
+            <field name="name">Integration Logs</field>
+            <field name="res_model">integration.log</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_integration_log_view_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="integration_log_view_tree"/>
+            <field name="act_window" ref="act_integration_log"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_integration_log_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="integration_log_view_form"/>
+            <field name="act_window" ref="act_integration_log"/>
+        </record>
+        <menuitem parent="menu_integration" action="act_integration_log"
+            sequence="20" id="menu_integration_log"/>
+
+        <!-- <record model="ir.action.wizard" id="wizard_integration_endpoint_test">
+            <field name="name">Test Integration</field>
+            <field name="wiz_name">integration.endpoint.test</field>
+            <field name="model">integration.endpoint</field>
+        </record>
+        <record model="ir.action.keyword" id="wizard_integration_endpoint_test_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">integration.endpoint,-1</field>
+            <field name="action" ref="wizard_integration_endpoint_test"/>
+        </record> -->
+
+        <record model="ir.model.access" id="access_integration_endpoint">
+            <field name="model">integration.endpoint</field>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_integration_endpoint_admin">
+            <field name="model">integration.endpoint</field>
+            <field name="group" ref="group_integration_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_integration_log">
+            <field name="model">integration.log</field>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_integration_log_admin">
+            <field name="model">integration.log</field>
+            <field name="group" ref="group_integration_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+    </data>
+</tryton>
