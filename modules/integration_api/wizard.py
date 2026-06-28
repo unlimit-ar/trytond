@@ -22,7 +22,6 @@ class IntegrationEndpointTestStart(ModelView):
 
 
 class IntegrationEndpointTest(Wizard):
-    "Test Integration Endpoint"
     __name__ = 'integration.endpoint.test'
 
     start = StateView(

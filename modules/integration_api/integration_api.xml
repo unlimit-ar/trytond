@@ -37,41 +37,41 @@
             <field name="name">integration_endpoint_test_start_form</field>
         </record>
 
-        <record model="ir.action.act_window" id="act_integration_endpoint">
+        <record model="ir.action.act_window" id="act_integration_endpoint_form">
             <field name="name">Integration Endpoints</field>
             <field name="res_model">integration.endpoint</field>
         </record>
         <record model="ir.action.act_window.view" id="act_integration_endpoint_view_tree">
             <field name="sequence" eval="10"/>
             <field name="view" ref="integration_endpoint_view_tree"/>
-            <field name="act_window" ref="act_integration_endpoint"/>
+            <field name="act_window" ref="act_integration_endpoint_form"/>
         </record>
         <record model="ir.action.act_window.view" id="act_integration_endpoint_view_form">
             <field name="sequence" eval="20"/>
             <field name="view" ref="integration_endpoint_view_form"/>
-            <field name="act_window" ref="act_integration_endpoint"/>
-        </record>
-        <menuitem parent="menu_integration" action="act_integration_endpoint"
+            <field name="act_window" ref="act_integration_endpoint_form"/>
+        </record> 
+        <menuitem parent="menu_integration" action="act_integration_endpoint_form"
             sequence="10" id="menu_integration_endpoint"/>
 
-        <record model="ir.action.act_window" id="act_integration_log">
+        <record model="ir.action.act_window" id="act_integration_log_form">
             <field name="name">Integration Logs</field>
             <field name="res_model">integration.log</field>
         </record>
         <record model="ir.action.act_window.view" id="act_integration_log_view_tree">
             <field name="sequence" eval="10"/>
             <field name="view" ref="integration_log_view_tree"/>
-            <field name="act_window" ref="act_integration_log"/>
+            <field name="act_window" ref="act_integration_log_form"/>
         </record>
         <record model="ir.action.act_window.view" id="act_integration_log_view_form">
             <field name="sequence" eval="20"/>
             <field name="view" ref="integration_log_view_form"/>
-            <field name="act_window" ref="act_integration_log"/>
+            <field name="act_window" ref="act_integration_log_form"/>
         </record>
-        <menuitem parent="menu_integration" action="act_integration_log"
+        <menuitem parent="menu_integration" action="act_integration_log_form"
             sequence="20" id="menu_integration_log"/>
 
-        <!-- <record model="ir.action.wizard" id="wizard_integration_endpoint_test">
+        <record model="ir.action.wizard" id="wizard_integration_endpoint_test_form">
             <field name="name">Test Integration</field>
             <field name="wiz_name">integration.endpoint.test</field>
             <field name="model">integration.endpoint</field>
@@ -79,10 +79,11 @@
         <record model="ir.action.keyword" id="wizard_integration_endpoint_test_keyword">
             <field name="keyword">form_action</field>
             <field name="model">integration.endpoint,-1</field>
-            <field name="action" ref="wizard_integration_endpoint_test"/>
-        </record> -->
+            <field name="action" ref="wizard_integration_endpoint_test_form"/>
+        </record>
 
-        <record model="ir.model.access" id="access_integration_endpoint">
+
+         <record model="ir.model.access" id="access_integration_endpoint">
             <field name="model">integration.endpoint</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
@@ -112,5 +113,6 @@
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
+
     </data>
 </tryton>

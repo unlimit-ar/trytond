@@ -12,7 +12,6 @@ LOGGER = logging.getLogger(__name__)
 
 
 class IntegrationEndpoint(ModelSQL, ModelView, DeactivableMixin):
-    "Integration Endpoint"
     __name__ = 'integration.endpoint'
 
     name = fields.Char('Name', required=True)
@@ -36,6 +35,14 @@ class IntegrationEndpoint(ModelSQL, ModelView, DeactivableMixin):
     timeout = fields.Integer('Timeout', required=True)
     retry_count = fields.Integer('Retry Count', required=True)
 
+    @classmethod
+    def __setup__(cls):
+        super().__setup__()
+        cls._buttons.update({
+            'test_integration': {},
+            })
+
+
     @staticmethod
     def default_active():
         return True
@@ -53,7 +60,7 @@ class IntegrationEndpoint(ModelSQL, ModelView, DeactivableMixin):
         return 0
 
     @classmethod
-    @ModelView.button_action('integration_api.wizard_integration_endpoint_test')
+    @ModelView.button_action('integration_api.wizard_integration_endpoint_test_form')
     def test_integration(cls, endpoints):
         pass
 
@@ -159,3 +166,6 @@ def _should_process_model(model):
     if model_name.startswith(('ir.', 'res.')):
         return False
     return True
+
+
+patch_modelsql_events()

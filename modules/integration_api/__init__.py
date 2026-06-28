@@ -1,16 +1,2 @@
-from trytond.pool import Pool
-
-from . import model
-from . import wizard
-
-
-def register():
-    Pool.register(
-        model.IntegrationEndpoint,
-        model.IntegrationLog,
-        wizard.IntegrationEndpointTestStart,
-        module='integration_api', type_='model')
-    Pool.register(
-        wizard.IntegrationEndpointTest,
-        module='integration_api', type_='wizard')
-    model.patch_modelsql_events()
+# This file is part of Tryton.  The COPYRIGHT file at the top level of
+# this repository contains the full copyright notices and license terms.
