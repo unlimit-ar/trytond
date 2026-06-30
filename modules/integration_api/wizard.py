@@ -28,9 +28,9 @@ class IntegrationEndpointTest(Wizard):
         'integration.endpoint.test.start',
         'integration_api.integration_endpoint_test_start_view_form', [
             Button('Cancel', 'end', 'tryton-cancel'),
-            Button('Execute', 'execute', 'tryton-ok', default=True),
+            Button('Execute', 'execute_state', 'tryton-ok', default=True),
             ])
-    execute = StateTransition()
+    execute_state = StateTransition()
 
     def default_start(self, fields):
         endpoint_id = Transaction().context.get('active_id')
@@ -44,7 +44,7 @@ class IntegrationEndpointTest(Wizard):
                     })
         return values
 
-    def transition_execute(self):
+    def transition_execute_state(self):
         endpoint = self.start.endpoint
         if not endpoint:
             raise UserError('Missing endpoint.')
