@@ -26,6 +26,10 @@ COPY requirements.txt .
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 6. Copiamos los módulos locales
+# 6. Copiamos el entrypoint y los módulos locales
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
 COPY ./modules_ar ./modules_ar
+
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
     

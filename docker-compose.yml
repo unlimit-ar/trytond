@@ -26,7 +26,7 @@ services:
       dockerfile: Dockerfile
       context: .
     volumes:
-      - ./modules/:/tmp/modules
+      - ./modules/:/opt/trytond/modules
       - ./trytond.conf:/etc/trytond.conf
       - ./sao:/var/www/sao
     environment:
@@ -37,6 +37,7 @@ services:
       - DB_USER=tryton
       - DB_PASSWORD=tryton
       - TRYTON_DATABASE=tryton80
+      - TRYTON_ROOT=/opt/trytond
       - MODULE_PREFIXES=padulles_
     networks:
       - tryton_network
@@ -50,7 +51,7 @@ services:
       dockerfile: Dockerfile
       context: .
     volumes:
-      - ./modules/:/tmp/modules
+      - ./modules/:/opt/trytond/modules
       - ./trytond.conf:/etc/trytond.conf
       - ./sao:/var/www/sao
     environment:
@@ -61,6 +62,7 @@ services:
       - DB_USER=tryton
       - DB_PASSWORD=tryton
       - TRYTON_DATABASE=tryton80
+      - TRYTON_ROOT=/opt/trytond
       - MODULE_PREFIXES=padulles_
     networks:
       - tryton_network
@@ -74,7 +76,7 @@ services:
       dockerfile: Dockerfile
       context: .
     volumes:
-      - ./modules/:/tmp/modules
+      - ./modules/:/opt/trytond/modules
       - ./trytond.conf:/etc/trytond.conf
       - ./sao:/var/www/sao
     environment:
@@ -85,6 +87,7 @@ services:
       - DB_USER=tryton
       - DB_PASSWORD=tryton
       - TRYTON_DATABASE=tryton80
+      - TRYTON_ROOT=/opt/trytond
       - MODULE_PREFIXES=padulles_
     networks:
       - tryton_network

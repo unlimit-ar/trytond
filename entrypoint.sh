@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT=/opt/tryton/7.0
+ROOT="${TRYTON_ROOT:-/opt/trytond}"
 MODULE_DIRS=("$ROOT/modules" "$ROOT/modules_ar")
 HASH_FILE=/var/lib/tryton/.modules_hashes
 FLAG_DIR=/var/lib/tryton
