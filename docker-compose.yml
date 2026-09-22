@@ -1,12 +1,3 @@
-version: '3.8'
-
-networks:
-  red_trytond-70:
-    ipam:
-      driver: default
-      config:
-        - subnet: 192.168.101.0/24
-
 services:
   trytond-v70:
     image: tryton/trytond:7.0
@@ -15,25 +6,19 @@ services:
       dockerfile: Dockerfile
       context: .
     restart: always
-    networks:
-      red_trytond-70:
-        ipv4_address: 192.168.101.10
     volumes:
       - ./modules/:/tmp/modules
       - ./modules_ar/:/tmp/modules_ar
       - ./trytond.conf:/etc/trytond.conf
     environment:
       - TRYTOND_CONFIG
-    command: 
+    command:
       ["gunicorn", "-w", "1", "-b", "0.0.0.0:8000", "trytond-app"]
-  
+
   trytond_worker-v70:
     image: tryton/trytond:7.0
     container_name: trytond_worker-v70
     restart: always
-    networks:
-      red_trytond-70:
-        ipv4_address: 192.168.101.11
     volumes:
       - ./modules/:/tmp/modules
       - ./modules_ar/:/tmp/modules_ar
@@ -48,9 +33,6 @@ services:
     image: tryton/trytond:7.0
     container_name: trytond-cron-v70
     restart: always
-    networks:
-      red_trytond-70:
-        ipv4_address: 192.168.101.12
     volumes:
       - ./modules/:/tmp/modules
       - ./modules_ar/:/tmp/modules_ar
@@ -58,7 +40,7 @@ services:
     environment:
       - TRYTOND_CONFIG
       - TRYTOND_DB
-    command: 
+    command:
       ["trytond-cron", "-d", "${TRYTOND_DB}"]
 
   nginx-sao-v70:
@@ -70,10 +52,5 @@ services:
       - ./sao:/var/www/sao
     ports:
       - "8080:80"
-    networks:
-      red_trytond-70:
-        ipv4_address: 192.168.101.13
     depends_on:
       - trytond-v70
-
-
