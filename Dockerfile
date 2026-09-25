@@ -1,5 +1,18 @@
 # Usa una imagen base de Python
-FROM python:3.9
+FROM python:3.12-slim
+
+# 2. Instalamos dependencias del sistema necesarias para compilar librerías de Tryton
+RUN apt-get update && apt-get install -y \
+    nano \
+    swig \
+    libpq-dev \
+    gcc \
+    python3-dev \
+    libxml2-dev \
+    libxslt1-dev \
+    zlib1g-dev \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 # Establece el directorio de trabajo en /app
 WORKDIR /app
