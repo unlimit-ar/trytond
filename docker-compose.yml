@@ -12,6 +12,9 @@ services:
       - ./trytond.conf:/etc/trytond.conf
     environment:
       - TRYTOND_CONFIG
+    networks:
+      - default
+      - tryton_net
     command:
       ["gunicorn", "-w", "3", "-b", "0.0.0.0:8000", "trytond-app"]
 
@@ -26,6 +29,9 @@ services:
     environment:
       - TRYTOND_CONFIG
       - TRYTOND_DB
+    networks:
+      - default
+      - tryton_net
     command:
       ["trytond-worker", "-d", "${TRYTOND_DB}"]
 
@@ -40,6 +46,9 @@ services:
     environment:
       - TRYTOND_CONFIG
       - TRYTOND_DB
+    networks:
+      - default
+      - tryton_net
     command:
       ["trytond-cron", "-d", "${TRYTOND_DB}"]
 
@@ -54,3 +63,7 @@ services:
       - "8080:80"
     depends_on:
       - trytond-v80
+
+networks:
+  tryton_net:
+    external: true
