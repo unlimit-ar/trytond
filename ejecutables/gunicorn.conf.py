@@ -1,6 +1,6 @@
 bind = "0.0.0.0:8000"
-accesslog = "/var/log/tryton_access.log"
-errorlog = "/var/log/tryton_error.log"
+accesslog = "-"
+errorlog = "-"
 workers = 3
 threads = 2
 loglevel = 'info'
